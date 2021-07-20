@@ -24,6 +24,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  base: process.env.BASE_URL,
   mode: 'history',
   routes
 })
