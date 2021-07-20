@@ -11,7 +11,7 @@ module.exports = {
             },
         },
     },
-    chainWebpack: config => {
+    chainWebpack: config => {   
         config.module
           .rule("pdf")
           .test(/\.pdf$/)
@@ -31,6 +31,8 @@ module.exports = {
   
             return args;
         })
-    }
+    },
+    
+    
 };
     
