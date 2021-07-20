@@ -70,9 +70,6 @@ export default {
         contact.$refs.contact.style.background = null
       }
     }
-  },
-  mounted(){
-    console.log(this.isDarkMode);
   }
 }
 </script>

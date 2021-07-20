@@ -203,9 +203,9 @@ export default {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            
+                            pointer-events: none;
                             // transition: stretch .1s ease;
-                            @include animation('stretch-out .3s ease');
+                            @include animation('stretch-out .5s ease');
                             .project-title{
                                 text-align: center;
                                 margin-top: auto;

@@ -54,6 +54,7 @@ $tablet: 768px;
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.6);
         transform: scale(1) rotate(360deg);
+        pointer-events:all;
     }
 }
 @include keyframes (stretch-out) {
@@ -67,6 +68,7 @@ $tablet: 768px;
         background-color: rgb(0, 51, 0);
     }
     100% {
+        pointer-events:none;
         opacity: 0;
         transform: scale(0) rotate(360deg);
         background-color: green;

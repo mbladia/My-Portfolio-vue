@@ -74,6 +74,7 @@ export default {
                         cursor: pointer;
                         svg{
                             height: 40px;
+                                width: auto;
                             path{
                                 transition: all ease .3s ;
                                 fill: #303A48;
