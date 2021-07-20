@@ -68,6 +68,7 @@ export default {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding: 10px;
                     button{
                         background: none;
                         border: none;
