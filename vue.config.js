@@ -27,7 +27,7 @@ module.exports = {
                 {   name: 'description', content:  'My updated portfolio, made with Vue JS.'},
                 { property: 'og:title', content: "Mark Bryan Ladia"},
                 {property: 'og:type', content: 'website'},
-                {property: 'og:image', content: require('@/assets/meta-og-img-portfolio.jpg') }  
+                {property: 'og:image', content: '@/src/assets/meta-og-img-portfolio.jpg' }  
             ];
   
             return args;
