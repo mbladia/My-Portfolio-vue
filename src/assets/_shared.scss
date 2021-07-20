@@ -1,0 +1,87 @@
+$dark-green: rgba(22,74,65,1);
+$med-green: rgba(77,119,78,1);
+$light-green: rgba(157,200,141,1);
+$light: white;
+$btn-dark: black;
+$bg-lightgreen: #effee4;
+$bg-medgreen: #e2f8d2;
+$tablet: 768px;
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+         @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+
+@include keyframes(slide-down) {
+    from { opacity: 0; height: 0%;}
+    to { opacity: .9; height: 100%;}
+}
+
+@include keyframes (stretch) {
+    0% {
+        opacity: 0;
+        transform: scale(.3) rotate(270deg);
+
+        background-color: green;
+    }
+    50% {
+        opacity: .5;
+        background-color: rgb(0, 51, 0);
+        // transform: rotate(180deg);
+    }
+    100% {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: scale(1) rotate(360deg);
+    }
+}
+@include keyframes (stretch-out) {
+    0% {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: scale(1) rotate(360deg);    
+    }
+    50% {
+        opacity: .5;
+        background-color: rgb(0, 51, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(360deg);
+        background-color: green;
+    }
+}
+
+@include keyframes (jump) {
+    33% {
+      text-shadow: 60px 0  #f37121;
+    }
+    50% {
+      transform: translate(40px, 0) rotate(-4deg);
+      text-shadow: 0 0px #8fc0a9;
+    }
+    66.67% {
+      text-shadow: -60px 0 #d54062;
+    }
+  }
