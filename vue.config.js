@@ -1,5 +1,8 @@
 
 module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/production-sub-path/'
+    : '/',
     css: {
         loaderOptions: {
         // pass options to sass-loader
