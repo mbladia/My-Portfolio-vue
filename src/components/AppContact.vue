@@ -33,7 +33,7 @@ export default {
                 },{
                     id: 3,
                     imgSrc: "logo-github",
-                    imgLink: "https://github.com/mbladia"
+                    imgLink: "#"
                 },{
                     id: 4,
                     imgSrc: "facebook-logo",
