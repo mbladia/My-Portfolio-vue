@@ -1,8 +1,8 @@
 <template>
-    <section class="projects modal-open">
-        <AppHeader />
+    <section ref="projects" class="projects modal-open">
+        <AppHeader ref="nav" v-on:clicked="isDarkEnabled($event)" />
         <div class="container">
-            <ul class="section-title">
+            <ul ref="sectionTitle" class="section-title">
                 <li>P</li>
                 <li>R</li>
                 <li>O</li>
@@ -29,7 +29,7 @@
         <transition name="fade">
             <AppSidebar v-show="isModalVisible" @close="closeModal" :sidebarTitle=itemTitle :sidebarDesc=itemDesc :sidebarTools=itemTools :sidebarLink=itemLink :sidebarImages=itemsImgs />
         </transition>
-        <AppContact />
+        <AppContact ref="contact"/>
     </section>
 </template>
 
@@ -52,7 +52,9 @@ export default {
             "itemLink": "",
             "itemTools": "",
             "itemsImgs": [],
+            isDarkMode: false,
             isModalVisible: false,
+            darkModeStorage: localStorage.getItem('darkMode'),
             projects: [
                 {
                     id:1,
@@ -144,7 +146,6 @@ export default {
             this.itemTools = itemTools
             this.itemLink = itemLink
             this.itemsImgs = itemsImgs
-            // console.log(this.itemLink);
         },
         showModal() {
             this.isModalVisible = true;
@@ -153,7 +154,52 @@ export default {
         closeModal() {
             this.isModalVisible = false;
             document.body.classList.remove("modal-open");
+        },
+        isDarkEnabled(updatedMode){
+            if(this.isDarkMode == true && updatedMode == true){
+                this.disableDarkMode()
+                this.isDarkMode = false
+            }
+            else if(updatedMode == true){
+                this.enableDarkMode()
+                this.isDarkMode = true
+            }else if(updatedMode == false){
+                this.disableDarkMode()
+                this.isDarkMode = false
+            }
+        },
+        disableDarkMode(){
+            const nav = this.$refs.nav
+            const project = this.$refs.projects
+            const contact = this.$refs.contact
+
+            nav.$refs.path.style.fill = null
+            nav.$refs.nav.style.background = null
+            project.style.background = null
+            this.$refs.sectionTitle.style.color = null
+            contact.$refs.contact.style.background = null
+            localStorage.setItem('darkMode', null);
+        },
+        enableDarkMode(){
+            const nav = this.$refs.nav
+            const project = this.$refs.projects
+            const contact = this.$refs.contact
+
+            nav.$refs.path.style.fill = "yellow"
+            nav.$refs.nav.style.background = "#191919"
+            project.style.background = "#303A48"
+            this.$refs.sectionTitle.style.color = "white"
+            contact.$refs.contact.style.background = "#191919"
+            localStorage.setItem('darkMode', true);
         }
+    },
+    mounted(){
+
+        if(this.darkModeStorage == "true"){
+            this.enableDarkMode()
+            this.isDarkMode = true
+        }
+
     }
 }
 </script>
@@ -177,7 +223,7 @@ export default {
                 position: absolute;
                 top: 0;
                 left: 0;
-                opacity: .1;
+                opacity: .3;
                 font-size: 100px;
                 line-height: .8;
                 font-weight: 700;

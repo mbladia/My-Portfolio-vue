@@ -20,7 +20,7 @@ export default {
     name: "AppHeader",
     data(){
         return{
-            isDark: false
+            isDark: null
         }
     },
     methods:{
@@ -73,19 +73,22 @@ export default {
                         background: none;
                         border: none;
                         cursor: pointer;
+                        
                         svg{
                             height: 40px;
                                 width: auto;
+                                transition: all ease-in-out .3s;
                             path{
                                 transition: all ease .3s ;
-                                fill: #303A48;
+                                fill: white;
 
                             }
-                            
+                            &:hover {
+                                // height: 42px;
+                                transform: rotate(180deg);
+                            }
                         }
-                        :hover {
-                            height: 42px;
-                        }
+                        
                     }
                 }
             }

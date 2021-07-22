@@ -1,6 +1,6 @@
 <template>
-    <section class="graphics">
-        <AppHeader />
+    <section ref="graphics" class="graphics">
+        <AppHeader ref="nav" v-on:clicked="isDarkEnabled($event)" />
         <div class="container">
             <ul class="graphics-grid">
 
@@ -9,7 +9,7 @@
                 </li>
             </ul>
         </div>
-        <AppContact />
+        <AppContact ref="contact" />
     </section>
 </template>
 
@@ -24,6 +24,8 @@ export default {
     },
     data(){
         return{
+            isDarkMode: false,
+            darkModeStorage: localStorage.getItem('darkMode'),
             graphics: [
                 {
                     
@@ -59,6 +61,48 @@ export default {
                     imgLink: "acrolyic-321.jpg",
                 }
             ]
+        }
+    },
+    methods:{
+        isDarkEnabled(updatedMode){
+            if(this.isDarkMode == true && updatedMode == true){
+                this.disableDarkMode()
+                this.isDarkMode = false
+            }
+            else if(updatedMode == true){
+                this.enableDarkMode()
+                this.isDarkMode = true
+            }else if(updatedMode == false){
+                this.disableDarkMode()
+                this.isDarkMode = false
+            }
+        },
+        disableDarkMode(){
+            const nav = this.$refs.nav
+            const contact = this.$refs.contact
+
+            nav.$refs.path.style.fill = null
+            nav.$refs.nav.style.background = null
+            this.$refs.graphics.style.background = null
+            contact.$refs.contact.style.background = null
+            localStorage.setItem('darkMode', null);
+        },
+        enableDarkMode(){
+            const nav = this.$refs.nav
+            const contact = this.$refs.contact
+
+            nav.$refs.path.style.fill = "yellow"
+            nav.$refs.nav.style.background = "#191919"
+            this.$refs.graphics.style.background = "#303A48"
+            contact.$refs.contact.style.background = "#191919"
+            localStorage.setItem('darkMode', true);
+        },
+    },
+    mounted(){
+        console.log(this.darkModeStorage);
+        if(this.darkModeStorage == "true"){
+            this.enableDarkMode()
+            this.isDarkMode = true
         }
     }
 }
