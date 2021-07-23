@@ -57,7 +57,9 @@ export default {
       const otherskill = this.$refs.otherskill
       const contact = this.$refs.contact
 
-      nav.$refs.path.style.fill = "yellow"
+      
+      // console.log(nav.$refs.darkModeSvg.src);
+
       nav.$refs.nav.style.background = "#191919"
       welcome.$refs.welcome.style.background = "#191919"
       welcome.$refs.svg.style.fill = "#696969";
@@ -79,7 +81,7 @@ export default {
         const otherskill = this.$refs.otherskill
         const contact = this.$refs.contact
 
-        nav.$refs.path.style.fill = null
+        
         nav.$refs.nav.style.background = null
         welcome.$refs.welcome.style.background = null
         welcome.$refs.svg.style.fill = null

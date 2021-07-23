@@ -1,7 +1,7 @@
 <template>
     <section class="welcome-section" ref="welcome">
         <div class="welcome-name-tablet">
-            <h1>Hi, {{ greetVisitor }}</h1>
+            <h1>{{ greetVisitor }}</h1>
             <h2>{{ greet }}</h2>
         </div>
         <div class="container">
@@ -20,14 +20,16 @@
             </div>
             <div class="welcome-text">
                 <div class="welcome-name">
-                    <h1>Hi, {{ greetVisitor }}</h1>
-                    <h2>{{ greet }}</h2>
+                    <h1>Hi, I'm Bryan. {{ greet }}</h1>
+                    <h2></h2>
                 </div>
-                <p class="welcome-description">Since beginning my journey as a Website Developer nearly 3 years ago, I've created multiple website projects,
-                    learned new skills and worked with talented people. I'm quietly confident, naturally curious, and constantly working on improving my programming skills.</p>
+                <p class="welcome-description">Full stack web developer with {{ yearStartWork }}+ years of experience
+                    coding websites.
+                </p>
+                
                 <div class="welcome-text-btn">
                     <!-- <button @click="downloadWithVueResource()" class="btn-darkmode-tablet">Download Resume</button> -->
-                    <p>Last update: Jan 2021</p>  
+                    <!-- <p>Last update: Jan 2021</p>   -->
                     <a class="btn-darkmode-tablet" :href="resume" download="Mark-Bryan-Resume">Download Resume </a>
                 </div>
             </div>
@@ -40,16 +42,21 @@ export default {
     name: "AppWelcome",
     data(){
         return{
+            yearStartWork : 0,
             isDarkMode: false,
             resume: require('@/assets/Mark-Bryan-Resume.pdf'),
             publicPath: process.env.BASE_URL,
             greetVisitor: "",
-            greet: "<say> Nice to meet you. </say>"
+            greet: "Nice to meet you."
         }
     },
     methods: {
         greetTime(){
+            
             var d = new Date();
+            var startYear = 2019;
+ 
+            this.yearStartWork = d.getFullYear() - startYear
             var timeDay = d.getHours();
             if(timeDay >= 5 && timeDay < 12){
                 this.greetVisitor = "Good Morning"
@@ -107,9 +114,9 @@ export default {
             padding: 0 10px;
             display: flex;
             justify-content: center;
-            @media screen and (min-width: 728px) {
-                height: 620px;
-                display:flex;
+            height: 400px;
+            @media screen and (min-width: $tablet) {
+                height: 650px;
             }
             .welcome-image{
                 width: auto;
@@ -121,32 +128,6 @@ export default {
                 @media screen and (max-width: 375px) {
                     display: none;
                 }
-                // .svg-image-box{
-                //     position: absolute;
-                // }
-                // .welcome-image-btn{
-                //     margin-bottom: 24px;
-                //     text-align: center;
-                //     @media screen and (min-width: 768px) {
-                //         display: none;
-                //     }
-                //     & > .btn-darkmode-mobile {
-                //         text-align: center;
-                //         font-size: 1.2rem;
-                //         text-decoration: none;
-                //         color: rgba(22,74,65,1);
-                //         background-color: $light;
-                //         padding: 5px 10px;
-                //         border-radius: 13px;    
-                //         box-shadow: black 2px 5px 7px;
-                //         margin-bottom: 20px;
-                //         border: none;
-                //         &:hover{
-
-                //             transition: ease-in-out .3s;
-                //         }
-                //     }
-                // }
                 #svg-image{
                     position: absolute;
                     height: 270px;
@@ -227,12 +208,13 @@ export default {
                 }
                 
                 & > .welcome-description{
-                    margin-top: 10px;
+                    // margin-top: 10px;
                     line-height: 1.5;
                     margin-bottom: 20px;
-                    @media screen and (min-width: 636px) {
-                        margin-top: 30px;
-                        line-height: 2;
+                    font-size: 23px;
+                    @media screen and (min-width: $tablet) {
+                        // margin-top: 30px;
+                        line-height: 1.5;
                         
                     }
                 }

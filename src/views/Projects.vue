@@ -173,7 +173,6 @@ export default {
             const project = this.$refs.projects
             const contact = this.$refs.contact
 
-            nav.$refs.path.style.fill = null
             nav.$refs.nav.style.background = null
             project.style.background = null
             this.$refs.sectionTitle.style.color = null
@@ -185,7 +184,7 @@ export default {
             const project = this.$refs.projects
             const contact = this.$refs.contact
 
-            nav.$refs.path.style.fill = "yellow"
+
             nav.$refs.nav.style.background = "#191919"
             project.style.background = "#303A48"
             this.$refs.sectionTitle.style.color = "white"

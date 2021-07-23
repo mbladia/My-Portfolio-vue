@@ -81,7 +81,7 @@ export default {
             const nav = this.$refs.nav
             const contact = this.$refs.contact
 
-            nav.$refs.path.style.fill = null
+
             nav.$refs.nav.style.background = null
             this.$refs.graphics.style.background = null
             contact.$refs.contact.style.background = null
@@ -91,7 +91,6 @@ export default {
             const nav = this.$refs.nav
             const contact = this.$refs.contact
 
-            nav.$refs.path.style.fill = "yellow"
             nav.$refs.nav.style.background = "#191919"
             this.$refs.graphics.style.background = "#303A48"
             contact.$refs.contact.style.background = "#191919"
@@ -99,7 +98,6 @@ export default {
         },
     },
     mounted(){
-        console.log(this.darkModeStorage);
         if(this.darkModeStorage == "true"){
             this.enableDarkMode()
             this.isDarkMode = true
@@ -108,7 +106,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .container{
         padding: 20px 0;
 

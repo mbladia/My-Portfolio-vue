@@ -87,3 +87,14 @@ $tablet: 768px;
       text-shadow: -60px 0 #d54062;
     }
   }
+
+@include keyframes(bloom){
+    0%{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
