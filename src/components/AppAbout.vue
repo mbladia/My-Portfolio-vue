@@ -21,7 +21,7 @@
                 </div>
                 
                 <p class="about-course">BSIT Major in Web Technology Track</p>
-                <i class="about-school">Univesity of the Cordillera 2018</i>
+                <p class="about-school">Univesity of the Cordillera 2018</p>
                 <p class="about-qoute">"Self-motivated Web Developer with experience working on multiple projects. Passionate and hardworking with penchant for meeting deadlines."</p>
             </div>
             

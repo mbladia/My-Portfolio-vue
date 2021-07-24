@@ -26,6 +26,7 @@
                 <p class="welcome-description">Full stack web developer with {{ yearStartWork }}+ years of experience
                     coding websites.
                 </p>
+                <h1 style="margin-bottom: 30px;"><b> Developer. Designer. Debugger</b></h1>
                 
                 <div class="welcome-text-btn">
                     <!-- <button @click="downloadWithVueResource()" class="btn-darkmode-tablet">Download Resume</button> -->

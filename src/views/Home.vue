@@ -3,7 +3,7 @@
   <AppWelcome ref="welcome"/> 
   <AppAbout ref="about"/>
   <AppProjects ref="projects"/>
-  <AppOtherSkill ref="otherskill"/>
+
   <AppContact ref="contact"/>
 
 </template>
@@ -14,7 +14,7 @@ import AppWelcome from '../components/AppWelcome.vue'
 import AppAbout from '../components/AppAbout.vue'
 import AppProjects from '../components/AppProjects.vue'
 import AppContact from '../components/AppContact.vue'
-import AppOtherSkill from '../components/AppOtherSkill.vue'
+// import AppOtherSkill from '../components/AppOtherSkill.vue'
 
 export default {
   name: 'Vue  ',
@@ -24,7 +24,7 @@ export default {
     AppAbout,
     AppProjects,
     AppContact,
-    AppOtherSkill
+
   },
   props: ["isDark"],
   data(){
@@ -54,7 +54,7 @@ export default {
       const nav = this.$refs.nav
       const about = this.$refs.about
       const projects = this.$refs.projects
-      const otherskill = this.$refs.otherskill
+      // const otherskill = this.$refs.otherskill
       const contact = this.$refs.contact
 
       
@@ -67,8 +67,8 @@ export default {
       about.$refs.about.style.color = "white";
       projects.$refs.projects.style.background = "#303A48"
       projects.$refs.sectiontitle.style.color = "white"
-      otherskill.$refs.otherskillbox.style.background = "#3B444F"
-      otherskill.$refs.title.style.color = "white"
+      // otherskill.$refs.otherskillbox.style.background = "#3B444F"
+      // otherskill.$refs.title.style.color = "white"
       contact.$refs.contact.style.background = "#191919"
       localStorage.setItem('darkMode', true);
     },
@@ -78,7 +78,7 @@ export default {
         const nav = this.$refs.nav
         const about = this.$refs.about
         const projects = this.$refs.projects
-        const otherskill = this.$refs.otherskill
+        // const otherskill = this.$refs.otherskill
         const contact = this.$refs.contact
 
         
@@ -89,8 +89,8 @@ export default {
         about.$refs.about.style.color = null
         projects.$refs.projects.style.background = null
         projects.$refs.sectiontitle.style.color = null
-        otherskill.$refs.otherskillbox.style.background = null
-        otherskill.$refs.title.style.color = null
+        // otherskill.$refs.otherskillbox.style.background = null
+        // otherskill.$refs.title.style.color = null
         contact.$refs.contact.style.background = null
         localStorage.setItem('darkMode', null);
     }

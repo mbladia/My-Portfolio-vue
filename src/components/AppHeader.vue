@@ -55,7 +55,8 @@ export default {
         },
         clickBurger(){
             this.isActive = !this.isActive;
-            if(this.isActive == true){                
+            if(this.isActive == true){        
+                // console.log(this.isActive);        
                this.$refs.navLink.style.visibility = 'visible'
                this.$refs.navLink.style.opacity = 1
                document.body.classList.add("modal-open");
@@ -68,6 +69,9 @@ export default {
         }
     },
     beforeMount(){
+        if(this.isActive == false){
+            document.body.classList.remove("modal-open");
+        }
 
         if(this.darkModeStorage == "true"){
             this.darkModeSvg = 'moon.svg'
