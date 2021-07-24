@@ -96,6 +96,7 @@ export default {
             align-items: center;
             color: $light;
             padding: 10px;
+            margin-top: 30px;
             margin-bottom: 15px;
             @media screen and (min-width: 636px) {
                 display: none;

@@ -108,6 +108,7 @@ export default {
                     cursor: pointer;
                     width: fit-content;
                     user-select: none;
+                    margin-bottom: auto;
                     @media screen and (min-width: $tablet) {
                         margin-left: auto;
                         
