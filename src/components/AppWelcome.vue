@@ -1,8 +1,11 @@
 <template>
     <section class="welcome-section" ref="welcome">
         <div class="welcome-name-tablet">
-            <h1>{{ greetVisitor }}</h1>
+            <h1>Hi, I'm Bryan.</h1>
             <h2>{{ greet }}</h2>
+            <p class="mobile-welcome-description">Full stack web developer with {{ yearStartWork }}+ years of experience
+                    coding websites.
+            </p>
         </div>
         <div class="container">
             <div class="welcome-image">
@@ -86,7 +89,7 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
         .welcome-name-tablet{
-            height: 170px;
+            height: 220px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -99,6 +102,7 @@ export default {
             }
             h1{
                 font-size: 2rem;
+                margin-top: auto;
                 @media screen and (max-width: 375px) {
                     font-size: 1.8rem;
                 }
@@ -108,6 +112,15 @@ export default {
                 @media screen and (max-width: 375px) {
                     font-size: 1rem;
                 }
+            
+            }
+            .mobile-welcome-description{
+                font-size: 23px;
+                text-align: center;
+                margin-top: auto;
+                @media screen and (min-width: 636px) {
+                    display: none;
+                }
             }
         }
         .container{
@@ -115,7 +128,7 @@ export default {
             padding: 0 10px;
             display: flex;
             justify-content: center;
-            height: 400px;
+            height: 330px;
             @media screen and (min-width: $tablet) {
                 height: 650px;
             }
@@ -155,10 +168,11 @@ export default {
                 // padding: 35px 10px;
                 color: $light;
                 text-align: center;
+                z-index: 99;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 @media screen and (min-width: 636px) {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
                     max-width: 768px;
                 }
                 .welcome-name{
@@ -173,6 +187,7 @@ export default {
                         display: none;
                         font-size: 2.6rem;
                         margin-bottom: 10px;
+                        
                     }
                     & > h2 {
                         @media screen and (min-width: 636px) {
@@ -213,10 +228,14 @@ export default {
                     line-height: 1.5;
                     margin-bottom: 20px;
                     font-size: 23px;
-                    @media screen and (min-width: $tablet) {
-                        // margin-top: 30px;
-                        line-height: 1.5;
+                    // @media screen and (min-width: $tablet) {
+                    //     // margin-top: 30px;
+                    //     line-height: 1.5;
                         
+                    // }
+                    @media screen and (max-width: 636px) {
+                        display: none;
+                        visibility: hidden;
                     }
                 }
                 
