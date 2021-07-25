@@ -12,11 +12,10 @@
                 <span></span>
             </div>
             <div class="nav-link" ref="navLink">
-                
                 <ul>
                     <li><router-link to="/" exact-path>Home</router-link></li>
                     <li><router-link to="/projects" exact-path>Projects</router-link></li>
-                    <li><router-link to="/graphics" exact-path>Graphics</router-link></li>
+                    <li><router-link to="/experience" exact-path>Experience</router-link></li>
                 </ul>
                 <button v-on:click="onClickButton()"  id="btn-darkmode" ref="btnDarkMode">
                     <img ref="darkModeSvg" :src="require('../assets/buttons/' + darkModeSvg)" alt="" />

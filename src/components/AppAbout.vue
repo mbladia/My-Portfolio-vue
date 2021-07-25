@@ -22,7 +22,7 @@
                 
                 <p class="about-course">BSIT Major in Web Technology Track</p>
                 <p class="about-school">Univesity of the Cordillera 2018</p>
-                <p class="about-qoute">"Self-motivated Web Developer with experience working on multiple projects. Passionate and hardworking with penchant for meeting deadlines."</p>
+                <!-- <p class="about-qoute">"Self-motivated Web Developer with experience working on multiple projects. Passionate and hardworking with penchant for meeting deadlines."</p> -->
             </div>
             
         </div>
@@ -220,6 +220,7 @@ export default {
                 
                 .about-course{
                     font-weight: 700;
+                    font-size: 1.3rem;
                 }
                 .about-qoute{
                     margin-top: 10px;
