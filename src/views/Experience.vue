@@ -35,7 +35,7 @@
                         <div class="work-details">                        
                             <tab-panels v-model="active">
                                 <tab-panel v-for="company in companies" :key="company.name">
-                                    <h1>{{company.job}} <a href="#">@{{company.name}}</a></h1>
+                                    <h1>{{company.job}} <a @click="externalLink(company.link)">@{{company.name}}</a></h1>
                                     <p class="work-date">{{company.date}}</p>    
                                     <ul>
                                         <li v-for="responsibility in company.responsibilities" :key="responsibility">{{responsibility}}</li>
@@ -123,8 +123,8 @@ export default {
         }
     },
     methods:{
-        externalLink(){
-            window.open(this.sidebarLink,'_blank')
+        externalLink(link){
+            window.open(link,'_blank')
         },
         isDarkEnabled(updatedMode){
             if(this.isDarkMode == true && updatedMode == true){
@@ -280,6 +280,7 @@ export default {
                     }
                     h1{
                         a{
+                            cursor: pointer;
                             color: yellow;
                             text-decoration: underline rgba(0, 0, 0, 0);
                             transition: all ease-in-out .4s;
