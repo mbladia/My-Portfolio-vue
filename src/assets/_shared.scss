@@ -57,6 +57,33 @@ $tablet: 768px;
         pointer-events:all;
     }
 }
+
+@include keyframes(smooth){
+    0%{
+        opacity: 0;
+        // height: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        // height: 100%;
+        transform: translateY(0);
+        pointer-events:all;
+    }
+}
+@include keyframes(smooth-out){
+    0%{
+        opacity: 1;
+        // height: 0;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        // height: 100%;
+        transform: translateY(100%);
+    }
+}
+
 @include keyframes (stretch-out) {
     0% {
         opacity: 1;

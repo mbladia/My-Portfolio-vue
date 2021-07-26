@@ -267,6 +267,8 @@ export default {
                         background-position: center;
                         background-size: contain;
                         box-shadow: 0px 0px 10px $med-green;
+                        overflow: hidden;
+                        transition: all ease .2s;
                         @media screen and(min-width: $tablet){
                             height: 300px;
                         }
@@ -276,13 +278,14 @@ export default {
                             opacity: 0;
                             color: white;
                             background: rgb(0,0,0);
+                            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
                             padding: 10px;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             
                             // transition: stretch .1s ease;
-                            @include animation('stretch-out .3s ease');
+                            @include animation('smooth-out 1s ease');
                             .project-title{
                                 text-align: center;
                                 margin-top: auto;
@@ -318,8 +321,12 @@ export default {
                         }
                         &:hover > .after-card{
                             
-                            @include animation('stretch .8s ease');
+                            @include animation('smooth .8s ease');
                             animation-fill-mode: forwards;
+                            animation-delay: .3s;
+                        }
+                        &:hover {
+                            transform: scale(1.05);
                         }
                     }
                 }
