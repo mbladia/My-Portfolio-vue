@@ -63,6 +63,7 @@ export default {
         left: 0;
         // overflow: hidden;
         background-color: rgba(0, 0, 0, 0.562);
+        z-index: 9999999;
         &-close{
             width: 30px;
             height: 30px;
