@@ -35,7 +35,7 @@
                         <div class="work-details">                        
                             <tab-panels v-model="active">
                                 <tab-panel v-for="company in companies" :key="company.name">
-                                    <h1>{{company.job}} <a @click="externalLink(company.link)">@{{company.name}}</a></h1>
+                                    <h1>{{company.job}} <a @click="externalLink(company.link)">@{{company.where}}</a></h1>
                                     <p class="work-date">{{company.date}}</p>    
                                     <ul>
                                         <li v-for="responsibility in company.responsibilities" :key="responsibility">{{responsibility}}</li>
@@ -83,6 +83,7 @@ export default {
             companies: [
                 {
                     name: "Onion Head Direct",
+                    where: "Onion Head Direct",
                     link: "http://www.onionheaddirect.com/",
                     job: "Website Developer",
                     date: "January 2019 - Present",
@@ -97,6 +98,7 @@ export default {
                 },
                 {
                     name: "Internship",
+                    where: "Onion Head Direct",
                     link: "http://www.onionheaddirect.com/",
                     job: "Assistant Web Developer",
                     date: "August 2018 - December 2018",
@@ -109,12 +111,13 @@ export default {
                 },
                 {
                     name: "M.I.S",
+                    where: "Management Information System - UC",
                     link: "https://www.uc-bcf.edu.ph/",
                     job: "Student Assistant",
                     date: "June 2016 - May 2018",
                     responsibilities: [
                         "Troubleshooting hardware and software.",
-                        "Maintaining computers, projectors, and computer rooms.",
+                        "Maintain school computers, projectors, and computer laboratory rooms.",
                         "Set up computers.",
                         "Basic network configurations."
                     ]

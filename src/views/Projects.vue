@@ -285,7 +285,7 @@ export default {
                             align-items: center;
                             
                             // transition: stretch .1s ease;
-                            @include animation('smooth-out 1s ease');
+                            // @include animation('smooth-out 1s ease');
                             .project-title{
                                 text-align: center;
                                 margin-top: auto;
