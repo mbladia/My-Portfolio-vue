@@ -24,6 +24,10 @@ const routes = [
     path: '/experience',
     name: 'Experience',
     component: () => import('../views/Experience.vue')
+  },
+  { 
+    path:'/:pathMatch(.*)*',
+    component: Home 
   }
 ]
 
