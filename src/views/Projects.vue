@@ -283,7 +283,7 @@ export default {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            
+                            pointer-events: none;
                             // transition: stretch .1s ease;
                             // @include animation('smooth-out 1s ease');
                             .project-title{
