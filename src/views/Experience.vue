@@ -82,11 +82,29 @@ export default {
             darkModeStorage: localStorage.getItem('darkMode'),
             companies: [
                 {
+                    name: "MDS CSI",
+                    where: "MDS Call Solution Inc.",
+                    link: "https://www.mdscsi.com/",
+                    job: "Technology Engineer",
+                    date: "August 2021 - Present",
+                    responsibilities: [
+                        "Analyze user needs and software requirements to determine feasibility of design and develop software solutions.",
+                        "Conceptualize and design applications based on requirements gathered from the client.",
+                        "Design or plan customizations of applications for client use with the aim of optimizing operational efficiency.",
+                        "Code applications based on requirements from clients and finalized designs produced.",
+                        "Deploy applications both on staging servers (for testing) and productions servers. ",
+                        "Conduct unit testing of developed codes/modules and assist in conducting User Acceptance Testing.",
+                        "Write/rewrite, review and debug coded programs.",
+                        "Support applications/systems developed by addressing queries and fixing reported bugs/design flaws."
+                    ]
+
+                },
+                {
                     name: "Onion Head Direct",
                     where: "Onion Head Direct",
                     link: "http://www.onionheaddirect.com/",
                     job: "Website Developer",
-                    date: "January 2019 - Present",
+                    date: "January 2019 - August 2021",
                     responsibilities: [
                         "Convert website mock-up design to WordPress/Shopify site.",
                         "Maintain website content and product information like prices, discounts, shipping, images, promotions, etc.",
