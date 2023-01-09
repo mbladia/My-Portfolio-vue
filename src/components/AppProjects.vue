@@ -63,7 +63,7 @@ export default {
                     id:2,
                     title: "Random App API", 
                     desc: "I maded it with Vue JS, created this app to improve my programming skills. This is hosted on heroku. Collected all my API github projects and display them all in singe web app. Random Dog Breed shows a random dog breed. Random Food Joke shows a random joke that is related to food. Random Cat Breed shows a random cat breed. NewsAPI shows top and breaking headlines in philippines, articles are sorted by the earliest date published first.",
-                    link: "https://rand-vue-app.herokuapp.com/",
+                    link: "https://random-api-lxem.onrender.com/",
                     tools: ["Vue JS", "HTML", "Sass", "Dog/Cat/Spoonacular/News API"],
                     imgSrc: require('@/assets/projects/rand-api-ss.jpg'),
                     imagesSrc: ["rand-app-sb-1", "rand-app-sb-2","rand-app-sb-3", "rand-app-sb-4"]
