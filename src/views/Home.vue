@@ -3,7 +3,7 @@
   <AppWelcome ref="welcome"/> 
   <AppAbout ref="about"/>
   <AppProjects ref="projects"/>
-  <AppOtherSkill ref="otherskill"/>
+  <!-- <AppOtherSkill ref="otherskill"/> -->
   <AppContact ref="contact"/>
 
 </template>
@@ -14,7 +14,7 @@ import AppWelcome from '../components/AppWelcome.vue'
 import AppAbout from '../components/AppAbout.vue'
 import AppProjects from '../components/AppProjects.vue'
 import AppContact from '../components/AppContact.vue'
-import AppOtherSkill from '../components/AppOtherSkill.vue'
+// import AppOtherSkill from '../components/AppOtherSkill.vue'
 
 export default {
   name: 'Vue  ',
@@ -24,7 +24,7 @@ export default {
     AppAbout,
     AppProjects,
     AppContact,
-    AppOtherSkill
+    // AppOtherSkill
 
   },
   props: ["isDark"],

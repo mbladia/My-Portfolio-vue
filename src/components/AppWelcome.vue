@@ -48,7 +48,7 @@ export default {
         return{
             yearStartWork : 0,
             isDarkMode: false,
-            resume: require('@/assets/resume-08-09-2021.pdf'),
+            resume: require('@/assets/09102023-resume.pdf'),
             publicPath: process.env.BASE_URL,
             greetVisitor: "",
             greet: "Nice to meet you."

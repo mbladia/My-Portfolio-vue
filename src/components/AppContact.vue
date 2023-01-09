@@ -25,7 +25,7 @@ export default {
             socialMedia: [{
                     id: 1,
                     imgSrc: "instagram-logo",
-                    imgLink: "https://www.instagram.com/mbladia/"
+                    imgLink: "https://www.instagram.com/imbi_lad/"
                 },{
                     id: 2,
                     imgSrc: "linkedin-logo",
@@ -33,7 +33,7 @@ export default {
                 },{
                     id: 3,
                     imgSrc: "logo-github",
-                    imgLink: "#"
+                    imgLink: "https://github.com/mbladia"
                 },{
                     id: 4,
                     imgSrc: "facebook-logo",
