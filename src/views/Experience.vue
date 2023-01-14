@@ -126,19 +126,6 @@ export default {
                         "Deliver production ready graphics for the website.",
                         "Create product banner/gif."
                     ]
-                },
-                {
-                    name: "M.I.S",
-                    where: "Management Information System - UC",
-                    link: "https://www.uc-bcf.edu.ph/",
-                    job: "Student Assistant",
-                    date: "June 2016 - May 2018",
-                    responsibilities: [
-                        "Troubleshooting hardware and software.",
-                        "Maintain school computers, projectors, and computer laboratory rooms.",
-                        "Set up computers.",
-                        "Basic network configurations."
-                    ]
                 }
             ],
         }
